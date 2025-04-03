@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="image/calculadora.png" />
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Krub:wght@400;700&family=Pacifico&family=Rouge+Script&display=swap" rel="stylesheet">
+    <script src="script2.js" defer ></script>
+    <link rel="stylesheet" href="style3.css">
+    <title>Calculadora</title>
+</head>
+<body>
+<!-- Contenedor principal de la calculadora -->
+  <div class="calculadora">
+    <!-- Campo de entrada para mostrar resultados, es de solo lectura -->
+    <input type="text" id="calculadora-resultado" disabled>
+    <!-- Contenedor de los botones -->
+     <div class="calculadora-botones">
+        <div class="calculadora-botones_numeros">
+            <!-- Cada botón llama a una función JavaScript cuando se hace clic -->
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button> <!-- Agrega un punto decimal -->
+            <button onclick="calculateResult()">=</button> <!-- Calcula el resultado -->
+      
+          </div>
+          <div class="calculadora-botones_operadores">
+              <button onclick="clearResult()">C</button> <!-- Limpia el campo de texto -->
+              <button onclick="appendValue('/')">/</button> <!-- Agrega una operación de división -->
+              <button onclick="appendValue('*')">*</button> <!-- Agrega una operación de multiplicación -->
+              <button onclick="appendValue('-')">-</button> <!-- Agrega una operación de resta -->
+              <button onclick="appendValue('+')">+</button> <!-- Agrega una operación de suma -->
+          </div>
+     </div>
+      </div>
+</body>
+</html>

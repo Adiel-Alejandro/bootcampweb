@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe FoodExpress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px;
+        }
+        .hero {
+            background: lightgray;
+            padding: 50px;
+        }
+        .categories, .featured-restaurants, .order-steps, .promotions {
+            padding: 30px;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FoodExpress</div>
+        <div class="search-bar"><input type="text" placeholder="Buscar comida o ubicación..."></div>
+        <div class="auth-buttons">
+            <button>Iniciar Sesión</button>
+            <button>Registrarse</button>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>Tu comida favorita en minutos</h1>
+        <button>Explorar Restaurantes</button>
+    </section>
+    
+    <section class="categories">
+        <h2>Categorías Populares</h2>
+        <p>Pizza | Sushi | Tacos | Hamburguesas | Postres</p>
+    </section>
+    
+    <section class="featured-restaurants">
+        <h2>Restaurantes Destacados</h2>
+        <p>Aquí aparecerán los restaurantes populares con calificaciones.</p>
+    </section>
+    
+    <section class="order-steps">
+        <h2>¡Ordena en 3 pasos!</h2>
+        <p>1. Selecciona tu restaurante</p>
+        <p>2. Elige tu comida</p>
+        <p>3. Recíbelo rápidamente</p>
+    </section>
+    
+    <section class="promotions">
+        <h2>Promociones Especiales</h2>
+        <p>Descuentos exclusivos en tus restaurantes favoritos.</p>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2024 FoodExpress - Términos | Contacto | Redes Sociales</p>
+    </footer>
+</body>
+</html>
