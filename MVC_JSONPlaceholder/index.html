@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios JSONPlaceholder - MVC</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #user-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .user-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .user-card p {
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usuarios</h1>
+    <div id="user-container"></div>
+
+    <!-- Scripts MVC -->
+    <script src="UserModel.js"></script>
+    <script src="UserView.js"></script>
+    <script src="UserController.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
