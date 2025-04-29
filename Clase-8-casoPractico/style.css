@@ -1,0 +1,114 @@
+body{
+    counter-reset: none;
+}
+
+.dotgothic16-regular {
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+  /* Configuración general del cuerpo */
+body {
+    font-family: "DotGothic16", sans-serif; /* Fuente de texto */
+    display: flex; /* Uso de Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    background-color: rgb(255, 255, 255); /* Fondo gris claro */
+    margin: 0; /* Elimina márgenes predeterminados */
+    }
+
+/* Estilo del contenedor principal de la calculadora */
+.calculadora {
+    width: 320px; /* Ancho de la calculadora */
+    background: #444444; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-style: solid; /* Estilo del borde  */
+    border-color: #323232; /* Color del borde*/
+    overflow: hidden; /* Oculta contenido desbordante */
+}
+
+/* Estilo del campo de resultados */
+#calculadora-resultado {
+    width: 95%; /* Ocupa todo el ancho */
+    height: 60px; /* Altura del campo */
+    font-size: 45px; /* Tamaño del texto */
+    text-align: right; /* Alinea el texto a la derecha */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    background: #e1e1e1; /* Fondo gris muy claro */
+    outline: none; /* Elimina contorno de enfoque */
+    font-family: "DotGothic16", sans-serif;
+}
+
+/* Estilo del contenedor de botones */
+.calculadora-botones{
+    display: flex; /* Organiza las Div de los botones */
+    justify-content:space-around; /* Espaciado entre columnas */
+
+
+  }
+
+
+.calculadora-botones_numeros {
+    display: grid; /* Organiza los botones en una cuadrícula */
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column ; /* Cuatro columnas iguales */
+    gap: 5px; /* Espaciado entre botones */
+    padding: 10px; /* Espaciado interno del contenedor */
+}
+
+
+.calculadora-botones_operadores{
+    display: grid; /* Organiza los botones en una cuadrícula */
+    grid-template-columns: repeat(1, 1fr); /* Cuatro columnas iguales */
+    gap: 5px; /* Espaciado entre botones */
+    padding: 10px; /* Espaciado interno del contenedor */
+}
+
+/* Estilo de cada botón */
+.calculadora-botones_numeros button {
+    height: 65px; /* Altura uniforme */
+    width: 65px; /* Anchura uniforme */
+    font-size: 18px; /* Tamaño del texto */
+    border: none; /* Sin bordes */
+    background: #007bff; /* Fondo azul por defecto */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a "mano" al pasar sobre el botón */
+    transition: background 0.2s; /* Animación de cambio de color */
+}
+
+.calculadora-botones_operadores button{
+    height: 65px; /* Altura uniforme */
+    width: 65px; /* Anchura uniforme */
+    font-size: 18px; /* Tamaño del texto */
+    border: none; /* Sin bordes */
+    background: #ff1e00; /* Fondo azul por defecto */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a "mano" al pasar sobre el botón */
+    transition: background 0.2s; /* Animación de cambio de color */
+}
+
+
+/* Cambia el color del fondo cuando se pasa el mouse por encima */
+.calculadora-botones_numeros button:hover {
+    background: #0056b3;
+}
+
+/* Cambia el fondo cuando se presiona */
+.calculadora-botones_numeros button:active {
+    background: #003f7f;
+}
+
+/* Botones de la última columna (operaciones especiales) */
+.calculadora-botones_operadores button:hover {
+    background: #ff4c4c; /* Fondo rojo */
+}
+
+.calculadora-botones_operadores button:active {
+    background: #cc0000; /* Fondo rojo oscuro al pasar el mouse */
+}
