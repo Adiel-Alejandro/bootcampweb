@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "msql": "^1.0.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.13.0",
+    "node-fetch": "^3.3.2"
+  },
+  "name": "semana-13",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

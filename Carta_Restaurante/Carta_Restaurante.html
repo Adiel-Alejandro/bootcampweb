@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consulta de Platos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Carta del Restaurante</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Dificultad</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-platos">
+                <!-- Aquí se llenarán los datos dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para ver imagen en grande -->
+    <div class="modal fade" id="modalImagen" tabindex="-1" aria-labelledby="modalImagenLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalImagenLabel">Imagen del Platillo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImagenSrc" src="" class="img-fluid rounded">
+                </div>
+                <!-- Nombre del platillo en la parte baja y centrado -->
+                <div class="modal-footer justify-content-center">
+                    <h5 id="modalNombrePlatillo"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para ver receta -->
+    <div class="modal fade" id="modalReceta" tabindex="-1" aria-labelledby="modalRecetaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRecetaLabel">Receta del Platillo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="recetaContenido">
+                    <!-- La receta se llenará aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Cargar los datos de los platos cuando el DOM esté listo
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('http://localhost:3000/platos')
+                .then(response => response.json())
+                .then(data => {
+                    const tabla = document.getElementById('tabla-platos');
+                    tabla.innerHTML = data.map(plato => `
+                        <tr>
+                            <td>
+                                <img src="http://localhost:3000/images/${plato.foto}" 
+                                     alt="${plato.nombre}" width="80" height="80" 
+                                     class="rounded cursor-pointer" 
+                                     onclick="mostrarImagen('${plato.foto}', '${plato.nombre}')">
+                            </td>
+                            <td>${plato.nombre}</td>
+                            <td>${plato.descripcion}</td>
+                            <td>${plato.dificultad}</td>
+                            <td>$${plato.precio.toFixed(2)}</td>
+                            <td><button class="btn btn-primary" onclick="verReceta(${plato.id_plato})">Ver Receta</button></td>
+                        </tr>
+                    `).join('');
+                });
+        });
+
+        // Función para mostrar la imagen en el modal
+        function mostrarImagen(foto, nombre) {
+            document.getElementById('modalImagenSrc').src = `http://localhost:3000/images/${foto}`;
+            document.getElementById('modalNombrePlatillo').textContent = nombre;
+            const modal = new bootstrap.Modal(document.getElementById('modalImagen'));
+            modal.show();
+        }
+
+        // Función para ver la receta
+        function verReceta(id) {
+            fetch(`http://localhost:3000/recetas/${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        // Si la API devuelve un mensaje de error (por ejemplo, no se encuentran ingredientes)
+                        alert(data.message);
+                        return;
+                    }
+
+                    const recetaContenido = document.getElementById('recetaContenido');
+                    // Limpiamos cualquier contenido anterior
+                    recetaContenido.innerHTML = '';
+                    
+                    // Insertamos los ingredientes en el modal
+                    data.forEach(ingrediente => {
+                        const ingredienteDiv = document.createElement('div');
+                        ingredienteDiv.innerHTML = `
+                            <p><strong>${ingrediente.id_ingrediente}</strong>: ${ingrediente.cantidad_requerida} ${ingrediente.unidad}</p>
+                        `;
+                        recetaContenido.appendChild(ingredienteDiv);
+                    });
+
+                    // Mostrar el modal
+                    const modal = new bootstrap.Modal(document.getElementById('modalReceta'));
+                    modal.show();
+                })
+                .catch(err => {
+                    console.error('Error al cargar la receta:', err);
+                    alert('Hubo un problema al cargar la receta.');
+                });
+        }
+    </script>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platos del Restaurante</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Platos del Restaurante</h1>
+        <button onclick="cargarPlatos()" class="btn btn-primary mb-3">Cargar Platos</button>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Nivel de Dificultad</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-platos"></tbody>
+        </table>
+    </div>
+
+    <script>
+        function cargarPlatos() {
+            fetch('http://localhost:5000/platos')
+                .then(response => response.json())
+                .then(platos => {
+                    const tabla = document.getElementById('tabla-platos');
+                    tabla.innerHTML = '';
+                    platos.forEach(plato => {
+                        tabla.innerHTML += `
+                            <tr>
+                                <td>${plato.id_plato}</td>
+                                <td>${plato.nombre}</td>
+                                <td>${plato.descripcion}</td>
+                                <td>${plato.nivel_dificultad}</td>
+                                <td>${plato.precio}</td>
+                                <td>
+                                    <button class="btn btn-danger" onclick="eliminarPlato(${plato.id_plato})">Eliminar</button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function eliminarPlato(id) {
+            fetch(`http://localhost:5000/eliminar/${id}`, { method: 'DELETE' })
+                .then(response => response.json())
+                .then(() => {
+                    alert('Plato eliminado');
+                    cargarPlatos();
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
