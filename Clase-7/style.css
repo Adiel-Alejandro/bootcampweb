@@ -1,59 +1,38 @@
-body{
+*{
     counter-reset: none;
-
 }
 
 
 
 .encabezado{
-    display: flex;
-    flex-direction: row;
-    margin: 0px;
+    padding: 10px 0;
 }
 
 .encabezado__logo{
-    width: 100px;
-        
+    width: 150px; 
 }
 
 .encabezado__contender{
     font-size: 20px;
-    display: flex;
-    height: 27px;
-    padding-left: 70%;
-    column-gap: 5px;
 }
 
 #separacion{
     background-color: rgb(0, 123, 255);
     height: 80px;
-    margin: 0;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .cuerpo{
-    display: flex;
-    height: 900px;
-    padding: 10px;
-    column-gap: 10px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
 }
 
-.cuerpo__section1{
-    display: flex;
-    flex-direction: column;
-    width: 750px;
-    position: relative;
-    margin-bottom: 10px ;
-    padding-right: 15px;
-
-}
 
 .cuerpo__section1__noticias{
-    display: inline-block;
     background-color: beige;
-    margin-top: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-    
+    padding: 10px 10px;
+    margin-bottom: 20px;   
 }
 
 .cuerpo__section1__noticias__encabezado{
@@ -66,11 +45,9 @@ body{
 
 .cuerpo__section1__publicidad{
     background-color: azure;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 19px;
+    font-size: 15px;
     text-align: justify;
+    padding: 10px 10px; 
 }
 
 .cuerpo__section1__publicidad__encabezado{
@@ -78,128 +55,106 @@ body{
 }
 
 .cuerpo__section2{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    }
+    padding: 10px 10px;
+
+}
+
+.cuerpo__section2__info1{
+    padding: 10px 10px;
+    margin-bottom: 20px;  
+}
 
 .cuerpo__section2__titulo{
     font-size: 35px;
-    margin: 0;
+
 }
 
-.cuerpo__section2__info1{   
-    max-width: 2350px;
-    margin-bottom: 20px;
-    
-}
 
 .cuerpo__section2__info1__foto{
-    width: 300px;
+    width: 320px;
     float:left;
-    margin: 10px;
-    
+    padding-right: 10px; 
 }
 
 .cuerpo__section1__info1__texto{
     text-align: justify;
     font-size: 20px;
-    margin: 0;
 
 }
 
-.cuerpo__section2__info2{   
-    max-width: 2350px;
-
+.cuerpo__section2__info2{
+    padding: 10px 10px;
+    margin-bottom: 20px;  
 }
 
 .cuerpo__section2__info2__foto{
-    width: 300px;
+    width: 320px;
     float:left;
-    margin: 10px;
-    
+    padding-right: 10px;
 }
 
-.cuerpo__section1__info2__texto{
+.cuerpo__section2__info2__texto{
     text-align: justify;
     font-size: 20px;
-    margin: 0;
-
 }
 
 .cuerpo__section3{
-    width: 780px;
-    height: fit-content;
-    border: 2px solid aquamarine;
-
+    border: 3px solid aquamarine;
+    padding: 10px 10px;
 }
 
 .cuerpo__seccion3__info1{
-    padding: 10px;
+    padding: 5px 5px;
+    margin-bottom: 10px;  
 }
 
 .cuerpo__seccion3__info1__titulo{
     background-color: rgb(0, 225, 255);
+    font-size: 28px;
+    padding: 10px 10px;
+    margin-bottom: 5px;  
 }
 
 .cuerpo__seccion3__info1__texto{
     text-align: justify;
-    font-size: 17.5px;
+    font-size: 16px;
 }
 
 .cuerpo__seccion3__info2{
-    padding: 10px;
+    padding: 5px 5px;
 }
 
 .cuerpo__seccion3__info2__titulo{
     background-color: rgb(0, 225, 255);
+    font-size: 28px;
+    padding: 10px 10px;
+    margin-bottom: 5px;  
 }
 
 .cuerpo__seccion3__info2__texto{
     text-align: justify;
-    font-size: 17.5px;
+    font-size: 16px;
 }
 
-
-
 .pie{
-    margin-top: 10px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: row;
     background-color: rgb(192, 222, 255);
+    padding: 10px 15px;
+    margin-bottom: 20px;  
 }
 
 .pie__contender1{
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-    align-items: center;
-    padding-left: 10px;
+    padding: 10px 10px;
+    margin-bottom: 20px;  
 
 }
 
 .pie__contender1__menu{
-        border-right:1px solid #0026fb;
-    padding-right: 10px;
-}
-
-.pie__contender2{
-    display: flex;
-    position: relative;
-    bottom: 5px;
-    right: 5px;
-    padding-left: 55%;
-    
-}
-
-
-.pie__contender__logo{
-    height: 15px;
-    padding-top: 19px;
+    border-right: 1px solid #0026fb;
     padding-right: 5px;
 }
 
-.pie__contender__copy{
-    width: 180px;
+.pie__contender2{
+    padding: 10px 10px;
+    margin-bottom: 20px;  
 }
+

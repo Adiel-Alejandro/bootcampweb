@@ -5,92 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
     <title>Tarea2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section Class="encabezado">
-        <img src="images/Logo.png" alt="Logo" Class="encabezado__logo">
-        <div Class="encabezado__contender">
-            <label for="txtName">Buscar</label>
-            <input type="text" id="txtName"></input>
+    <div class="container">
+        <section Class="encabezado row align-items-center">
+            <div class="col-lg-9 col-md-7">
+                <img src="images/Logo.png" alt="Logo" Class="encabezado__logo " >
+            </div>
+            <div Class="encabezado__contender col-lg-3 col-md-5">
+                <label for="Buscar" class="">Buscar</label>
+                <input type="search" id="Buscar" class=""></input>
+            </div>
+        </section>
+        <div class="row">
+                <div id="separacion"></div>
         </div>
+        <article Class="cuerpo row">
+            <section class="cuerpo__section1 col-lg-2 col-md-3">
+                <div class="d-flex flex-column">
+                    <div class="cuerpo__section1__noticias">
+                        <div>
+                            <a href="https://www.Google.com" target="_blank" class="cuerpo__section1__noticias__encabezado">Noticias</a>
+                            <p>dd-mm-aaaa
+                            <a href="https://www.Google.com" target="_blank" >Lectus fermentum ante ipsum primis</a></p> 
+                            <p>dd-mm-aaaa
+                            <a href="https://www.Google.com" target="_blank" >elementum ante ipsum primis curae</a></p>
+                            <p>dd-mm-aaaa
+                            <a href="https://www.Google.com" target="_blank" >curae ante ipsum primis nullam tellus</a></p>
+                            <p>dd-mm-aaaa
+                            <a href="https://www.Google.com" target="_blank" >nullam ante ipsum primis elementum tellus</a></p>
+                            <p>dd-mm-aaaa
+                            <a href="https://www.Google.com" target="_blank" >Lectus nullam tellus</a></p>
+                            <a href="https://www.Google.com" target="_blank" class="cuerpo__section1__noticias__encabezado" >Enlaces relacionados</a>
+                        </div>
+                        <div class="cuerpo__section1__lista">
+                            <li>
+                                <a href="https://www.Google.com" target="_blank" class="enlace">interdum curae laoreet</a>
+                            </li>
+                            <li>
+                                <a href="https://www.Google.com" target="_blank" class="enlace">himenaeos sapien</a>
+                            </li>
+                            <li>
+                                <a href="https://www.Google.com" target="_blank" class="enlace">facilisis in sodales</a>
+                            </li>
+                        </div>
+                    </div>
 
-    </section>
-        <div id="separacion"></div>
-    <article Class="cuerpo">
-        <section class="cuerpo__section1">
-            <div class="cuerpo__section1__noticias">
-                <a href="https://www.Google.com" target="_blank" class="cuerpo__section1__noticias__encabezado">Noticias</a>
-                <p>dd-mm-aaaa
-                <a href="https://www.Google.com" target="_blank" >Lectus fermentum ante ipsum primis</a></p> 
-                <p>dd-mm-aaaa
-                <a href="https://www.Google.com" target="_blank" >elementum ante ipsum primis curae</a></p>
-                <p>dd-mm-aaaa
-                <a href="https://www.Google.com" target="_blank" >curae ante ipsum primis nullam tellus</a></p>
-                <p>dd-mm-aaaa
-                <a href="https://www.Google.com" target="_blank" >nullam ante ipsum primis elementum tellus</a></p>
-                <p>dd-mm-aaaa
-                <a href="https://www.Google.com" target="_blank" >Lectus nullam tellus</a></p>
-                <a href="https://www.Google.com" target="_blank" class="cuerpo__section1__noticias__encabezado" >Enlaces relacionados</a>
-                <div class="cuerpo__section1__lista">
-                    <li>
-                        <a href="https://www.Google.com" target="_blank" class="enlace">interdum curae laoreet</a>
-                    </li>
-                    <li>
-                        <a href="https://www.Google.com" target="_blank" class="enlace">himenaeos sapien</a>
-                    </li>
-                    <li>
-                        <a href="https://www.Google.com" target="_blank" class="enlace">facilisis in sodales</a>
-                    </li>
+                    <div class="cuerpo__section1__publicidad">
+                        <a href="https://www.Google.com" target="_blank" class="cuerpo__section1__publicidad__encabezado">Publicidad</a>
+                        <p>Tellus urna nec tempus iaculis vehicula eu gravida, porta elementum rutrum mollis ultricies ultrices quisque sagittis, Mauris finibus ante condimentum eros iaculis, id feugiat purus faucibus. Duis in dolor consequat, lacinia sapien in, dapibus felis. vivamus dapibus mi lectus parturient sociosqu felis convallis. Rhoncus a neque potenti sociosqu tellus curae vulputate accumsan montes vivamus ultrices
+                        <a href="https://www.Google.com" target="_blank" class="enlace">Serguir leyendo...</a></p> 
+                    </div>
                 </div>
+            </section>
+            <section class="cuerpo__section2 col-lg-8 col-md-6">
+                <div class="d-flex flex-column">
+                    <h2 class="cuerpo__section2__titulo">Phasellus aliquam sodales pharetra</h2>
+                    <div class="cuerpo__section2__info1">
+                        <img src="images/foto1.jpg" alt="Foto1" Class="cuerpo__section2__info1__foto">
+                        <p class="cuerpo__section1__info1__texto">Donec a neque sollicitudin, varius tellus ut, dapibus mi. Vivamus eleifend lorem a neque molestie, sit amet sagittis nunc rutrum. Duis eleifend interdum feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean sit amet quam ac nisi placerat malesuada. Morbi arcu purus, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut est vitae est lacinia aliquam in ac sem. Aliquam pretium eget magna a cursus. Fusce lacus justo, ullamcorper sed diam vel, vulputate lobortis mauris. Aliquam sed lobortis augue, et vulputate lectus. Phasellus viverra auctor mauris, vitae dignissim magna cursus sit amet. Mauris ut eros vestibulum, consectetur mi a, maximus sem. In hac habitasse platea dictumst. Suspendisse rutrum volutpat ipsum in mollis. finibus quis dictum nec, viverra eget quam. Nullam vulputate nunc eget sapien suscipit facilisis. Nunc cursus ante libero, et malesuada urna egestas ut. In congue semper ante, non commodo sapien. Curabitur turpis lectus, placerat ut ornare eget, aliquam vitae ex. Cras eleifend dapibus elit, ut iaculis lacus. Cras sollicitudin nisl a libero hendrerit, id varius lorem aliquam.
+                        <a href="https://www.Google.com" target="_blank" >Serguir leyendo...</a></p>
+                    </div>
+                    <h2 class="cuerpo__section2__titulo"> Praesent molestie maximus pellentesque</h2>
+                    <div class="cuerpo__section2__info2">
+                        <img src="images/foto2.jpg" alt="Foto2" Class="cuerpo__section2__info2__foto">
+                        <p class="cuerpo__section2__info2__texto">Phasellus ultrices, risus sit amet tincidunt fringilla, sapien enim congue augue, Sed vulputate accumsan convallis. Vivamus efficitur velit a enim lobortis, non tempus neque tincidunt. Vestibulum molestie purus sed ante interdum consequat. Sed at commodo lacus. Nulla facilisi. Pellentesque ultrices vitae tellus a lacinia. Duis eget odio massa. Ut vestibulum massa lectus, commodo porttitor odio faucibus quis. ac aliquet eros erat sed velit. In mollis lacus at metus convallis, Morbi arcu purus, finibus quis dictum nec, viverra eget quam. at egestas diam dignissim. Cras eleifend faucibus risus. Integer consequat congue lacus quis ornare. Sed cursus ullamcorper posuere. Vivamus aliquam mollis dictum. Praesent sit amet eleifend velit, vitae viverra massa. Duis ut sodales elit.
+                        <a href="https://www.Google.com" target="_blank">Serguir leyendo...</a></p>
+                    </div>
+                </div>
+            </section>
+            <section class="cuerpo__section3 col-lg-2 col-md-3">
+                <div class="d-flex flex-column">
+                    <div class="cuerpo__seccion3__info1">
+                        <h2 class="cuerpo__seccion3__info1__titulo">Potenti solli pharetra</h2>
+                        <p class="cuerpo__seccion3__info1__texto">Lorem ipsum dolor sit amet consectetur adipiscing elit ornare tristique laoreet rhoncus maecenas, integer porta sapien habitasse quis molestie viverra vivamus egestas justo fermentum, a varius nascetur sociosqu turpis nunc fames vestibulum pulvinar ridiculus magna.
+                        <a href="https://www.Google.com" target="_blank" >Serguir leyendo...</a></p>
+                    </div>
+                    <div class="cuerpo__seccion3__info2">
+                        <h2 class="cuerpo__seccion3__info2__titulo">Donec turpis duis</h2>
+                        <p class="cuerpo__seccion3__info2__texto">Rutrum lectus ligula rhoncus auctor ante parturient vel pellentesque conubia, dignissim est vehicula nunc leo nisi nullam montes, pretium turpis venenatis sodales metus iaculis id tortor.
+                        <a href="https://www.Google.com" target="_blank">Serguir leyendo...</a></p>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <Footer class="pie d-flex justify-content-between align-items-center">
+            <div class="pie__contender1 flex-row ">
+                <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu col">Nulla</a>
+                <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu col">et</a>
+                <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu col">lobortis</a>
+                <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu col">sapien</a>
+                <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu col">quam</a>
+                <a href="https://www.Google.com" target="_blank" class="col">pulvinar</a>
             </div>
-            <div class="cuerpo__section1__publicidad">
-                <a href="https://www.Google.com" target="_blank" class="cuerpo__section1__publicidad__encabezado">Publicidad</a>
-                <p>Tellus urna nec tempus iaculis vehicula eu gravida, porta elementum rutrum mollis ultricies ultrices quisque sagittis, Mauris finibus ante condimentum eros iaculis, id feugiat purus faucibus. Duis in dolor consequat, lacinia sapien in, dapibus felis. vivamus dapibus mi lectus parturient sociosqu felis convallis. Rhoncus a neque potenti sociosqu tellus curae vulputate accumsan montes vivamus ultrices
-                <a href="https://www.Google.com" target="_blank" class="enlace">Serguir leyendo...</a></p> 
+            <div class="pie__contender2 flex-row">
+                <p class="pie__contender__copy">&copy;copyright Lorem ipsum</p>
             </div>
-        </section>
-        <section class="cuerpo__section2">
-            <h2 class="cuerpo__section2__titulo">Phasellus aliquam sodales pharetra</h2>
-            <div class="cuerpo__section2__info1">
-                <img src="images/foto1.jpg" alt="Foto1" Class="cuerpo__section2__info1__foto">
-                <p class="cuerpo__section1__info1__texto">Donec a neque sollicitudin, varius tellus ut, dapibus mi. Vivamus eleifend lorem a neque molestie, sit amet sagittis nunc rutrum. Duis eleifend interdum feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean sit amet quam ac nisi placerat malesuada. Morbi arcu purus, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut est vitae est lacinia aliquam in ac sem. Aliquam pretium eget magna a cursus. Fusce lacus justo, ullamcorper sed diam vel, vulputate lobortis mauris. Aliquam sed lobortis augue, et vulputate lectus. Phasellus viverra auctor mauris, vitae dignissim magna cursus sit amet. Mauris ut eros vestibulum, consectetur mi a, maximus sem. In hac habitasse platea dictumst. Suspendisse rutrum volutpat ipsum in mollis. finibus quis dictum nec, viverra eget quam. Nullam vulputate nunc eget sapien suscipit facilisis. Nunc cursus ante libero, et malesuada urna egestas ut. In congue semper ante, non commodo sapien. Curabitur turpis lectus, placerat ut ornare eget, aliquam vitae ex. Cras eleifend dapibus elit, ut iaculis lacus. Cras sollicitudin nisl a libero hendrerit, id varius lorem aliquam.
-                <a href="https://www.Google.com" target="_blank" >Serguir leyendo...</a></p>
-            </div>
-            <h2 class="cuerpo__section2__titulo"> Praesent molestie maximus pellentesque</h2>
-            <div class="cuerpo__section2__info2">
-                <img src="images/foto2.jpg" alt="Foto2" Class="cuerpo__section2__info2__foto">
-                <p class="cuerpo__section1__info2__texto">Phasellus ultrices, risus sit amet tincidunt fringilla, sapien enim congue augue, Sed vulputate accumsan convallis. Vivamus efficitur velit a enim lobortis, non tempus neque tincidunt. Vestibulum molestie purus sed ante interdum consequat. Sed at commodo lacus. Nulla facilisi. Pellentesque ultrices vitae tellus a lacinia. Duis eget odio massa. Ut vestibulum massa lectus, commodo porttitor odio faucibus quis. ac aliquet eros erat sed velit. In mollis lacus at metus convallis, Morbi arcu purus, finibus quis dictum nec, viverra eget quam. at egestas diam dignissim. Cras eleifend faucibus risus. Integer consequat congue lacus quis ornare. Sed cursus ullamcorper posuere. Vivamus aliquam mollis dictum. Praesent sit amet eleifend velit, vitae viverra massa. Duis ut sodales elit.
-                <a href="https://www.Google.com" target="_blank">Serguir leyendo...</a></p>
-            </div>
-        </section>
-        <section class="cuerpo__section3">
-            <div class="cuerpo__seccion3__info1">
-                <h2 class="cuerpo__seccion3__info1__titulo">Potenti sollicitudin pharetra</h2>
-                <p class="cuerpo__seccion3__info1__texto">Lorem ipsum dolor sit amet consectetur adipiscing elit ornare tristique laoreet rhoncus maecenas, integer porta sapien habitasse quis molestie viverra vivamus egestas justo fermentum, a varius nascetur sociosqu turpis nunc fames vestibulum pulvinar ridiculus magna.
-                <a href="https://www.Google.com" target="_blank" >Serguir leyendo...</a></p>
-            </div>
-            <div class="cuerpo__seccion3__info2">
-                <h2 class="cuerpo__seccion3__info2__titulo">Donec turpis aptent duis</h2>
-                <p class="cuerpo__seccion3__info2__texto">Rutrum lectus ligula rhoncus auctor ante parturient vel pellentesque conubia, dignissim est vehicula nunc leo nisi nullam montes, pretium turpis venenatis sodales metus iaculis id tortor.
-                <a href="https://www.Google.com" target="_blank">Serguir leyendo...</a></p>
-            </div>
-        </section>
-    </article>
-    <Footer class="pie">
-        <div class="pie__contender1">
-            <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu">Nulla</a>
-            <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu">et</a>
-            <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu">lobortis</a>
-            <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu">sapien</a>
-            <a href="https://www.Google.com" target="_blank" class="pie__contender1__menu">quam</a>
-            <a href="https://www.Google.com" target="_blank" >pulvinar</a>
-        </div>
-        <div class="pie__contender2">
-            <img src="images/descarga.webp" alt="copyright" Class="pie__contender__logo">
-            <p class="pie__contender__copy">copyright Lorem ipsum</p>
-        </div>
-    </Footer>
+        </Footer>
+    </div>
 </body>
-
 </html>
